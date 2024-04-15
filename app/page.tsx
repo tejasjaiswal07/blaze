@@ -2,7 +2,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <p>hello app</p>
+    <p className='text-4xl text-green-500' > hello app</p>
+    
   )
 }
 
