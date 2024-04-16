@@ -2,7 +2,10 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <>
+        <div className='text-9xl text-rose-400'>helloo protected motherfuckers</div>
+    
+    </>
   )
 }
 
