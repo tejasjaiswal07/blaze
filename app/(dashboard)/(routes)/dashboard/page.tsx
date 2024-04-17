@@ -1,11 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, ArrowRight, Code, ImageIcon, Music, VideoIcon } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Code,
+  ImageIcon,
+  Music,
+  VideoIcon,
+} from "lucide-react";
 import React from "react";
 import { cn } from "@/lib/utils";
 
 const tools = [
+  {
+    title: "Conversation",
+    description: "Generate code with the power of AI",
+    icon: Code,
+    color: "text-blue-700",
+    href: "/conversations",
+    bgColor: "bg-blue-100",
+  },
   {
     title: "Video Generation",
     description: "Generate videos with the power of AI",
@@ -41,7 +56,6 @@ const tools = [
 ];
 
 const page = () => {
-
   const router = useRouter();
   return (
     <div>
@@ -56,7 +70,7 @@ const page = () => {
         <div className="px-4 md:px-20 lg:px-32 space-y-4">
           {tools.map((tool) => (
             <Card
-            onClick={() => router.push(tool.href)}
+              onClick={() => router.push(tool.href)}
               key={tool.href}
               className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition curser-pointer"
             >
